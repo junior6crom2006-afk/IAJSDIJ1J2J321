@@ -1,0 +1,182 @@
+[
+    {
+        "comando": "/au",
+        "nombre": "Payflow CCN",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/cv",
+        "nombre": "CrediBanco [$0.23]",
+        "tipo": "CHARGED",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/fu",
+        "nombre": "Fullsteam",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "OFF",
+        "razon": "Mantenimiento",
+        "ultima_revision": "2026-04-13 21:32:30"
+    },
+    {
+        "comando": "/ka",
+        "nombre": "Cybersource [AUTH]",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/la",
+        "nombre": "Stripe 1$",
+        "tipo": "CHARGED",
+        "premium": true,
+        "estado": "OFF",
+        "razon": "Api error",
+        "ultima_revision": "2026-04-14 20:19:02"
+    },
+    {
+        "comando": "/ly",
+        "nombre": "Stripe Auth",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/mk",
+        "nombre": "Moneris [AUTH]",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "OFF",
+        "razon": null,
+        "ultima_revision": "2026-04-14 20:52:24"
+    },
+    {
+        "comando": "/mv",
+        "nombre": "Moneris CCN",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/nmi",
+        "nombre": "NMI CCN",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/nt",
+        "nombre": "Payrix Charged",
+        "tipo": "CHARGED",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/pe",
+        "nombre": "Payeezy CCN [V2]",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/pl",
+        "nombre": "Braintree AVS [V2]",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/rap",
+        "nombre": "Recurly CCN",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/rr",
+        "nombre": "Recurly CCN",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/vbv",
+        "nombre": "B3 CHECK [3D]",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/ve",
+        "nombre": "Zuora + Adyen [AUTH]",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/xt",
+        "nombre": "Braintree AVS [AUTH]",
+        "tipo": "AUTH",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/zr",
+        "nombre": "Cybersource + Chase CCN",
+        "tipo": "CCN",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/mass",
+        "nombre": "Mass Checker",
+        "tipo": "MASS",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    },
+    {
+        "comando": "/psg",
+        "nombre": "Multi Mass",
+        "tipo": "MASS",
+        "premium": true,
+        "estado": "ON",
+        "razon": null,
+        "ultima_revision": "2026-04-13 19:23:00"
+    }
+]

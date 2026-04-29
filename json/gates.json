@@ -1,0 +1,106 @@
+[
+    {
+        "cmd": "sh",
+        "gate": "Shopify",
+        "site": "morphe.com",
+        "type": "free",
+        "product": 6930449432648
+    },
+    {
+        "cmd": "pz",
+        "gate": "Shopify + Payeezy",
+        "site": "wallaroohats.com/products/carkella-aloha-emblem",
+        "type": "premium",
+        "product": 43181432012985
+    },
+    {
+        "cmd": "/au",
+        "gate": "Payflow CCN",
+        "type": "premium"
+    },
+    {
+        "cmd": "/cv",
+        "gate": "CrediBanco [$0.23]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/fu",
+        "gate": "Fullsteam [AUTH]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/ka",
+        "gate": "Cybersource [AUTH]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/la",
+        "gate": "Stripe 1$",
+        "type": "premium"
+    },
+    {
+        "cmd": "/ly",
+        "gate": "Stripe Auth",
+        "type": "premium"
+    },
+    {
+        "cmd": "/mk",
+        "gate": "Moneris [AUTH]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/mv",
+        "gate": "Moneris CCN",
+        "type": "premium"
+    },
+    {
+        "cmd": "/nmi",
+        "gate": "NMI CCN",
+        "type": "premium"
+    },
+    {
+        "cmd": "/nt",
+        "gate": "Payrix Charged",
+        "type": "premium"
+    },
+    {
+        "cmd": "/pe",
+        "gate": "Payeezy CCN [V2]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/pl",
+        "gate": "Braintree AVS [V2]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/rap",
+        "gate": "Recurly CCN",
+        "type": "premium"
+    },
+    {
+        "cmd": "/rr",
+        "gate": "Recurly CCN",
+        "type": "premium"
+    },
+    {
+        "cmd": "/vbv",
+        "gate": "B3 CHECK [3D]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/ve",
+        "gate": "Zuora + Adyen [AUTH]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/xt",
+        "gate": "Braintree AVS [AUTH]",
+        "type": "premium"
+    },
+    {
+        "cmd": "/zr",
+        "gate": "Cybersource + Chase CCN",
+        "type": "premium"
+    }
+]

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SHOPPING BAG - Rock & Spark</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <link rel="dns-prefetch preconnect" href="https://static.rockandspark.com"/>
+  <link rel="dns-prefetch preconnect" href="https://photo.rockandspark.com"/>
+  <link rel="dns-prefetch preconnect" href="https://asset.rockandspark.com"/>
+  <link rel="dns-prefetch preconnect" href="https://www.googletagmanager.com"/>
+  <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com"/>
+  <link rel="dns-prefetch preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="dns-prefetch preconnect" href="https://connect.facebook.net"/>
+  <link rel="dns-prefetch preconnect" href="https://www.facebook.com"/>
+  <link rel="preload" as="script" href="https://static.rockandspark.com/themes/rockandspark/js/common/analytics.js?id=2fee33f1cdca59fcd6f8d55ae895bd1b"/>
+  <link rel="preload" as="style" href="https://static.rockandspark.com/themes/rockandspark/css/common.css?id=2f03812fff5b31d54cd64d6a7d5facc1"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="https://static.rockandspark.com/site/rockandspark/images/logo/fav-icon.png"/>
+  <link rel="apple-touch-icon" href="https://static.rockandspark.com/site/rockandspark/images/logo/apple-touch-icon.png"/>
+  <link rel="android-touch-icon" href="https://static.rockandspark.com/site/rockandspark/images/logo/android-touch-icon.png"/>
+  <link rel="search" type="application/opensearchdescription+xml" href="https://rockandspark.com/opensearch.xml" title="Rock &amp; Spark Fashion Search"/>
+  <meta name="google-site-verification" content="rJHOb_hl8JRZWaYhHKUwsr-u9tirUJKjGDEH48prMyE"/>
+  <meta name="facebook-domain-verification" content="s4vtxfk02vr7kmtwu2gp8kpjvbgk5j"/>
+    <link rel="stylesheet" href="https://static.rockandspark.com/themes/rockandspark/css/common.css?id=2f03812fff5b31d54cd64d6a7d5facc1"/>
+  <link href="https://static.rockandspark.com/themes/rockandspark/css/cart.css?id=43c020dd726f4527c8973304158cd450" rel="stylesheet">
+<script>var GLOBAL = {"ENV":"prod","PID":"cart.checklist","UID":0,"DOMAIN":"rockandspark.com","DOMAIN_COOKIE":".rockandspark.com","TIMESTAMP":1730797549,"WEBSITE_CODE":"rockandspark","PLATFORM_CODE":"web","CLIENT_IP":"2806:1016:8:c80c:e5d3:c668:cead:25e1","LANG_CODE":"en","CURRENCY_CODE":"USD","PATH_LANG_PREFIX":"","STATIC_URL_PREFIX":"https:\/\/static.rockandspark.com","THEME_LANG_VERSION":1725284204,"THEME_URL_PREFIX":"https:\/\/static.rockandspark.com\/themes\/rockandspark"};
+var _learnq = [];
+var CURRENCIES = [{"c":"USD","s":"$","t":",","d":".","p":2,"f":"!# $","r":"1.00000000"},{"c":"EUR","s":"€","t":".","d":",","p":2,"f":"!# $","r":"0.90659"},{"c":"GBP","s":"£","t":",","d":".","p":2,"f":"!# $","r":"0.79318"},{"c":"AUD","s":"$","t":",","d":".","p":2,"f":"!# $","r":"1.485707"},{"c":"CAD","s":"$","t":",","d":".","p":2,"f":"!# $","r":"1.349485"},{"c":"HKD","s":"$","t":",","d":".","p":2,"f":"!# $","r":"7.848445"},{"c":"JPY","s":"¥","t":",","d":".","p":0,"f":"!# $","r":"134.178014"},{"c":"NZD","s":"$","t":",","d":".","p":2,"f":"!# $","r":"1.58827"},{"c":"KRW","s":"₩","t":",","d":".","p":2,"f":"!# $","r":"1318.210236"}];
+var dataLayer = [{"user_id":"","currency":"USD"}];
+var ANALYTICS = {"config":{"currencyCode":"USD","eventParentsLevel":3,"urlPrefix":"https:\/\/analytics.rockandspark.com","publicKey":"CaPTkRUtPtupb54TeDYEqJHIAwUkX6QG","ps_dom_load":2000,"ps_page_load":5000}};
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W77RXQ5');</script>
+  <script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/common/analytics.js?id=2fee33f1cdca59fcd6f8d55ae895bd1b"></script>
+</head>
+<body>
+  <ui-drawer id="js-header-drawer-search" class="ui-drawer-wrap" data-title="Search Our Site">
+  <slot name="body" class="hidden">
+    <div>
+      <label class="relative block p-4 ">
+          
+          <span class="js-drawer-search-btn absolute inset-y-0 right-7 flex items-center pl-2">
+              <i class="iconfont icon-sousuo text-xl cursor-pointer"></i>
+          </span>
+          <input class="js-drawer-search-input focus:outline-none focus:border-slate-200 focus:ring-slate-200 focus:ring-1  placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-3 pr-9 shadow-sm sm:text-sm" placeholder="Search for products" type="text" name="search"/>
+      </label>
+      <div class="p-4 shadow text-sm border-t">
+        Need some inspiration?      </div>
+    </div>
+    <div class="search-goods-box overflow-y-scroll h-full">
+      <div id="js-drawer-search-html" class="h-full"></div>
+    </div>
+  </slot>
+</ui-drawer>
+  <ui-drawer id="js-header-drawer-login" class="ui-drawer-wrap font-Inter" data-title="LOGIN">
+  <slot name="body" class="hidden">
+    <form class="p-4" id="js-drawer-sign-in-form" autocomplete="off" novalidate="novalidate">
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">EMAIL<i class="text-red-700 ml-1">*</i></div>
+        <div class="item-body">
+          <input class="w-full border-inherit" id="js-drawer-sign-in-passport" name="passport" type="text"/>
+        </div>
+      </div>
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">Password<i class="text-red-700 ml-1">*</i></div>
+        <div class="item-body">
+          <input class="w-full border-inherit" id="js-drawer-sign-in-password" autocomplete name="password" type="password"/>
+        </div>
+      </div>
+      <div class="text-red-700 m-2 error-tips text-xs">
+      </div>
+      <div id="js-btn-drawer-sign-in" class="mt-4 hover:opacity-80 container cursor-pointer bg-red-700 w-full text-sm text-white text-center p-2">
+        SIGN IN      </div>
+      <div class=" text-sm text-slate-600 mt-4">
+        New customer?        <span class="ui-drawer-close cursor-pointer text-orange-400 hover:border-b border-orange-400" id="js-drawer-login-to-register">Create your account</span>
+      </div>
+      <div class=" text-sm text-slate-600 mt-2">
+        Lost password?        <span class="ui-drawer-close cursor-pointer text-orange-400 hover:border-b border-orange-400" id="js-drawer-login-to-password">Recover password</span>
+      </div>
+    </form>
+  </slot>
+</ui-drawer>
+  <ui-drawer id="js-header-drawer-register" class="ui-drawer-wrap" data-title="REGISTER">
+  <slot name="body" class="hidden">
+    <form id="js-drawer-sign-up-form" autocomplete="off" novalidate="novalidate" class="p-4">
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">First Name</div>
+        <div class="item-body">
+          <input class="w-full border-inherit" id="js-drawer-sign-up-first-name" name="firstName" type="text"/>
+        </div>
+      </div>
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">Last Name</div>
+        <div class="item-body">
+          <input class="w-full border-inherit" id="js-drawer-sign-up-last-name" name="lastName" type="text"/>
+        </div>
+      </div>
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">Email<i class="text-red-700 ml-1">*</i></div>
+        <div class="item-body">
+          <input class="w-full border-inherit" id="js-drawer-sign-up-passport" name="passport" type="text"/>
+        </div>
+      </div>
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">Password<i class="text-red-700 ml-1">*</i></div>
+        <div class="item-body">
+          <input class="w-full border-inherit" id="js-drawer-sign-up-password" autocomplete name="password" type="password"/>
+        </div>
+      </div>
+      <p class="text-red-700 m-2 error-tips text-xs"></p>
+      <div class="mt-4 ui-form-item">
+        <input class="accent-pink-500 accent-pink-300" type="checkbox" id="js-drawer-sign-up-is-subscribe" name="is_subscribe" value="1" checked/>
+        <label class="text-sm text-slate-600 mt-4" for="js-drawer-sign-up-is-subscribe">
+          Follow us to receive exclusive offers and our latest news        </label>
+      </div>
+      <div class="ui-form-item">
+        <input class="accent-pink-500 accent-pink-300" type="checkbox" id="js-drawer-sign-up-is-agree" name="is_agree" value="1" checked/>
+        <label class="text-sm text-slate-600 mt-4" for="js-drawer-sign-up-is-agree">
+        I agree Rock & spark's
+          <a class=" cursor-pointer text-orange-400 hover:border-b border-orange-400" target="_blank" href="/help/terms-conditions">Terms &amp; Conditions</a>
+        </label>
+      </div>
+      <div class="container bg-red-700 w-full text-white text-center p-2 cursor-pointer mt-4" id="js-btn-drawer-sign-up">REGIST</div>
+      <div class="text-sm text-slate-600 mt-4">
+        Already have an account?        <span class="ui-drawer-close cursor-pointer text-orange-400 hover:border-b border-orange-400" id="js-drawer-regist-to-login">Login here</span>
+      </div>
+    </form>
+  </slot>
+</ui-drawer>
+<ui-drawer id="js-header-drawer-password" class="ui-drawer-wrap" data-title="RECOVER PASSWORD">
+  <slot name="body" class="hidden">
+    <form id="js-drawer-forget-password-form" class="p-4" autocomplete="off" novalidate="novalidate">
+      <div class="mt-4 ui-form-item">
+        <div class="mb-2 text-sm text-slate-500">Email Address</div>
+        <div class="item-body"><input class="w-full border-inherit" id="js-drawer-forget-password-email" name="email" type="text"/></div>
+      </div>
+      <div class="mt-4 ui-form-item relative">
+        <div class="mb-2 text-sm text-slate-500">Access code</div>
+        <div class="item-body">
+          <div class="flex ">
+            <div class="grow flex justify-center items-center">
+              <input class="w-full border-inherit" id="js-drawer-forget-password-code" name="code" type="text" minLength="1" maxLength="6"/>
+            </div>
+            <div class="flex-none w-30 flex justify-center items-center tracking-widest">
+              <img id="js-drawer-forget-password-img" style="height:30px;width:auto;" class="cursor-pointer mx-2" height="30px" src="https://static.rockandspark.com/themes/rockandspark/img/loading.gif" alt="" data-src="/captcha?style=1"/>
+              <a id="js-drawer-forget-password-refresh" class="refresh text-sm text-slate-600 cursor-pointer text-orange-400 hover:border-b border-orange-400" href="javascript:void(0);">Refresh</a>
+            </div>
+          </div>
+        </div>
+        <div class="error-tips text-red-700 m-2 text-xs"></div>
+      </div>
+      <div class="mt-4 ui-form-item">
+        <div id="js-drawer-forget-password-submit" href="javascript:void(0)" class="container cursor-pointer bg-red-700 w-full text-white text-center p-2">Continue</div>
+      </div>
+      <div class="text-sm text-slate-600 mt-4">
+        Remembered your password?        <span class="ui-drawer-close cursor-pointer text-orange-400 hover:border-b border-orange-400" id="js-drawer-password-to-login">Back to login</span>
+      </div>
+    </form>
+  </slot>
+</ui-drawer>
+  <ui-drawer id="js-header-drawer-shopping-carts" class="ui-drawer-wrap" data-title="SHOPPING CART">
+    <slot name="body" class="hidden">
+        <div class="lg:flex flex-row-reverse h-full bg-white">
+        <div class="w-96 maxmd:w-80 relative flex flex-col h-full maxlg:h-8/9">
+            <slot name="header">
+                <div class="flex  border-b border-slate-300">
+                       <div class="grow h-14 flex font-Montserrat tracking-widest2 items-center ml-4">SHOPPING CART</div>
+                            <div class="flex-none ui-drawer-close w-16 flex justify-center items-center tracking-widest gap-x-2">
+                            <i class="iconfont icon-del text-xl cursor-pointer" id="js-drawer-close"></i>
+                        </div>
+                </div>
+            </slot>
+            
+                
+                <div class="js-drawer-shopping-box relative w-full h-full bg-white felx-none">
+                    <div class="search-goods-box overflow-y-scroll absolute inset-0">
+                    
+                      <div id="js-drawer-shopping-carts-html"></div>
+                   
+                   
+                    </div>
+                </div>
+                <div class="js-header-drawer-shopping-subtotal p-4  border-slate-300 border-t text-sm text-white">
+                  <div class="hidden">
+                    <div class="border border-orange-100 bg-amber-50 text-gray-800 p-2 mb-4 text-center">Congratulations! You are eligible for Buy 2 Get 1 Free. (Code: <strong>B2G1</strong>)</div>
+                  </div>
+                  <div class="flex justify-between text-base items-center text-gray-800">
+                    <div class="font-bold">Subtotal:</div>
+                    <div class="js-drawer-checklist-subtotal-html px-2 py-2"></div>
+                  </div>
+                  
+                  <a href="/cart/checklist" class="block my-2 text-black bg-gray-100 w-full text-sm cursor-pointer text-center p-2  hover:bg-gray-200 hover:text-black">VIEW CART </a>
+                  <a href="/shopping/checkout" class="js-shopping-checkout block my-2 bg-red-700 w-full text-white cursor-pointer text-center p-2 hover:text-white hover:bg-red-900  a-no-hover">CHECK OUT</a>
+                  <a aria-label="paypal" href="/payment/express-checkout" class="block my-2 bg-amber-300 w-full cursor-pointer text-center p-2 hover:bg-amber-400">
+                    <img class="m-auto" style="height:20px" height="20" src="https://static.rockandspark.com/images/common/payment/paypal/paypal.png"/>
+                  </a>
+                </div>
+                
+                <div class="hidden" id="js-header-shopping-carts-shipping">
+                    <div class="p-4 absolute bottom-0 z-20 bg-white w-full">
+                        <div class="pb-4">
+                            Estimate Shipping
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-sm text-gray-600 pb-0.5">Country</div>
+                            <select class="w-full divide-none border border-slate-300 focus:border-slate-500 focus:ring-white focus:ring-1">
+                                <option>46</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-sm text-gray-600 pb-0.5">Province</div>
+                            <select class="w-full divide-none border border-slate-300 focus:border-slate-500 focus:ring-white">
+                                <option>46</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-sm text-gray-600 pb-0.5">Postal/Zip Code</div>
+                            <input type="text" class="w-full divide-none border border-slate-300 focus:border-slate-500 focus:ring-white"/>
+                        </div>
+                        <div class="container my-4 bg-red-700 w-full text-white cursor-pointer text-center p-2 text-red-700 hover:bg-slate-700">CALCULATE SHIPPING</div>
+                        <div class="js-header-shopping-carts-shipping-close container my-4 bg-gray-100 w-full text-sm cursor-pointer text-center p-2 ">CENCEL</div>
+                        <div class="text-sm text-red-600 pb-0.5">Error : zip Enter a postal code</div>
+                    </div>
+                    <div class="js-header-shopping-carts-shipping-close absolute bg-black w-full h-full left-0 top-0 opacity-30 z-5">
+                    </div>
+                </div>
+                
+                <div class="hidden" id="js-header-shopping-carts-coupon">
+                    <div class="p-4 absolute bottom-0 z-20 bg-white w-full">
+                        <div class="pb-4">
+                            Add A Coupon
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-sm text-gray-600 pb-1.5">Coupon code will work on checkout page</div>
+                            <input type="text" placeholder="Coupon code" class="w-full divide-none border border-slate-300 focus:border-slate-500 focus:ring-white"/>
+                        </div>
+                        <div class="container my-4 bg-red-700 w-full text-white cursor-pointer text-center p-2 text-red-700 hover:bg-slate-700">SAVE</div>
+                        <div class="js-header-shopping-carts-coupon-close container my-4 bg-gray-100 w-full text-sm cursor-pointer text-center p-2 ">CENCEL</div>
+                        <div class="text-sm text-red-600 pb-0.5">Error : zip Enter a postal code</div>
+                    </div>
+                    <div class="js-header-shopping-carts-coupon-close absolute bg-black w-full h-full left-0 top-0 opacity-30 z-5">
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </slot>
+</ui-drawer>
+  <div style="min-height: calc(100vh - 52px)">
+    <header class="js-header header-wrap">
+      <div class="js-header-scroll-fixed w-full z-30 top-0">
+        <div class="header-mod bg-white shadow-md lg:hidden pt-0.5 pb-0.5">
+          <div class="flex">
+            <div class="flex-none w-28 flex items-center"></div>
+            <div class="grow h-14 flex justify-center items-center ">
+              <a href="/"><img class=" w-10 h-10" src="https://static.rockandspark.com/site/rockandspark/images/logo/logo_300x300.png"/></a>
+            </div>
+            <div class="flex-none w-26 flex justify-center  items-center js-header-currency">
+              <div class="hs-dropdown relative inline-flex">
+                <button id="hs-dropdown-currency" type="button" class="hs-dropdown-toggle py-2 px-2 inline-flex justify-center items-center font-medium bg-white text-gray-700 align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm bg-white">
+                  <span class="js-header-currency-code">USD</span>
+                  <svg class="hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+                <div class="hs-dropdown-menu hidden transition-[opacity,margin] z-[40] duration hs-dropdown-open:opacity-100 opacity-0 mt-2 min-w-[4rem] bg-white shadow-md rounded-lg p-2 mt-2 divide-y divide-gray-200 bg-white" aria-labelledby="hs-dropdown-currency">
+                  <div class="py-2 first:pt-0 last:pb-0">
+                                      <a data-currency="USD" class="selected flagst4-sm flagst4-USD flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      USD                    </a>
+                                       <a data-currency="EUR" class=" flagst4-sm flagst4-EUR flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      EUR                    </a>
+                                       <a data-currency="GBP" class=" flagst4-sm flagst4-GBP flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      GBP                    </a>
+                                       <a data-currency="AUD" class=" flagst4-sm flagst4-AUD flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      AUD                    </a>
+                                       <a data-currency="CAD" class=" flagst4-sm flagst4-CAD flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      CAD                    </a>
+                                       <a data-currency="HKD" class=" flagst4-sm flagst4-HKD flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      HKD                    </a>
+                                       <a data-currency="JPY" class=" flagst4-sm flagst4-JPY flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      JPY                    </a>
+                                       <a data-currency="NZD" class=" flagst4-sm flagst4-NZD flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      NZD                    </a>
+                                       <a data-currency="KRW" class=" flagst4-sm flagst4-KRW flagst4 lazyloadt4sed flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 js-header-currency-item" href="#" rel="nofollow">
+                      KRW                    </a>
+                                     </div>
+                </div>
+              </div>
+              <div class="relative mr-4">
+                <i class="iconfont icon-gouwudai text-2xl cursor-pointer" id="js-pc-header-shopping-carts-btn"></i>
+                <div class="js-header-shoppingcart-quantity float-top-number absolute -top-1 -right-1 rounded-full bg-red-800 text-white text-xs font-Inter">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-mod bg-white shadow-md maxlg:hidden pt-0.5 pb-0.5">
+          <div class="flex">
+            <div class="flex-none w-24 flex justify-center items-center">
+              <div><a href="/"><img class=" w-10 h-10" src="https://static.rockandspark.com/site/rockandspark/images/logo/logo_300x300.png"/></a>
+              </div>
+            </div>
+            <div class="grow h-14 "></div>
+            <div class="flex-none w-26 flex justify-center  items-center mx-1">
+                              
+                <div>
+                  <i class="js-pc-header-login iconfont icon-morentouxiang text-2xl cursor-pointer"></i>
+                </div>
+                            <div class="relative">
+                <i class="iconfont icon-gouwudai text-2xl cursor-pointer mx-1" id="js-mobile-header-shopping-carts-btn2"></i>
+                <div class="js-header-shoppingcart-quantity mx-1 float-top-number absolute -top-1 -right-1 rounded-full bg-red-800 text-white text-xs font-Inter">0</div>
+              </div>
+              <span class="js-header-money tracking-tighter text-sm mx-1">0</span>
+              <select class="js-header-change-currency divide-none border-none focus:outline-none focus:border-white focus:ring-white focus:ring-1">
+                                  <option value="USD" selected>USD</option>
+                                  <option value="EUR" >EUR</option>
+                                  <option value="GBP" >GBP</option>
+                                  <option value="AUD" >AUD</option>
+                                  <option value="CAD" >CAD</option>
+                                  <option value="HKD" >HKD</option>
+                                  <option value="JPY" >JPY</option>
+                                  <option value="NZD" >NZD</option>
+                                  <option value="KRW" >KRW</option>
+                              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+        <main class="page-main pb-4">
+<div id="js-checkout-page">
+  <div class="p-12 bg-black opacity-50 text-white text-2xl text-center">SHOPPING CART</div>
+  <div class="lg:max-w-7xl lg:m-auto py-4 pt-8" id="js-checklist-box">
+          <div class="ui-no-data my-24 text-sm px-4">
+        <img class="ui-img" src="https://static.rockandspark.com/themes/rockandspark/img/shopping/cart-empty.png" alt="Cart Empty"/>
+        <div class="title-large mt-4">There are no items in the shopping cart, and you will see the items you added before logging in</div>
+        <div class="mt-2">
+          <a class="cursor-pointer text-orange-400 hover:border-b border-orange-400 mr-2" href="/user/sign-in">Sign In/Sign Up</a>
+          <a class="cursor-pointer text-orange-400 hover:border-b border-orange-400 ml-2" href="/">SHOP NOW</a>
+        </div>
+      </div>
+      </div>
+</div>
+    </main>
+  </div>
+  <div style="background:#131921">
+    <div class="p-4 text-white text-sm text-center lg:max-w-7xl mx-auto pb-4 ">
+    ©2009 - 2023 RS All Rights Reserved    </div>
+  </div>
+  <script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/manifest.js?id=3b98a61e15143d4eb1981635dea96596"></script>
+  <script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/global.js?id=3d95e6cf18a0c43fc492318d8d2283ee"></script>
+  <script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/vendor.js?id=67644e689693e308b27c0b6ca8bccbf0"></script>
+  <script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/common.js?id=aa7d67b10b1dd10fabd9ca0a49673fe1"></script>
+  <script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/common/main.js?id=456a623e42bb145e154078e3334662f0"></script>
+<script type="text/javascript" src="https://static.rockandspark.com/themes/rockandspark/js/cart/checklist.js?id=6722c214282393c0af449bc7951bdf29"></script>
+</body>
+</html>
