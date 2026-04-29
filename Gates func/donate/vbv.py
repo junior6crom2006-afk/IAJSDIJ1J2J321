@@ -19,7 +19,7 @@ def get_bin(cc):
         return "None"
 
 
-def b3vbv(cc, mes, ano, cvv, proxyg):
+def vbv(cc, mes, ano, cvv, proxyg):
         
         session = requests.Session()
         if proxyg:
@@ -30,6 +30,8 @@ def b3vbv(cc, mes, ano, cvv, proxyg):
                     "http": proxyg,
                     "https": proxyg
                 }
+        
+        session = requests.Session()
 
             #----------------------requiere1----------------------------#
 

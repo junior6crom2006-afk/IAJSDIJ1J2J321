@@ -278,34 +278,44 @@ def GetBinCountry(country_code):
 
 async def get_bin_info(bin: str) -> dict | None:
     bin = bin[0:6]
-    async with AsyncClient(follow_redirects=True, verify=False) as s:
-        response = await s.get(
-            f"https://zyrex.qzz.io/v1/Tools/bin?bin={bin}",
-            headers={
-                "Authorization": "Bearer zyrex_84g9BVyproH7AIqtKrVuCtWQ3JvM7H6Y"
-            }
-        )
-        if response.status_code != 200:
-            res = get_bin_info_of_database(bin)
-            if res: res['api_code'] = response.status_code
-            return res
-        response_text = response.text
-        response_json = json.loads(response_text)
-        banned_bins = json.load(open("json/banned_bins.json", "r"))
+    try:
+        async with AsyncClient(follow_redirects=True, verify=False) as s:
+            response = await s.get(
+                f"https://zyrex.qzz.io/v1/Tools/bin?bin={bin}",
+                headers={
+                    "Authorization": "Bearer zyrex_84g9BVyproH7AIqtKrVuCtWQ3JvM7H6Y"
+                }
+            )
+    except Exception as e:
+        res = get_bin_info_of_database(bin)
+        if res:
+            res["api_code"] = "error"
+            res["api_error"] = str(e)
+        return res
 
-        country_name = (
-            response_json.get("BIN", {})
-            .get("country", {})
-            .get("name", "")
-            .upper()
-        )
+    if response.status_code != 200:
+        res = get_bin_info_of_database(bin)
+        if res:
+            res["api_code"] = response.status_code
+        return res
 
-        banned = False
-        if str(bin) in banned_bins or "BRAZIL" in country_name:
-            banned = True
-        response_json["banned"] = banned
-        response_json["api_code"] = 200
-        return response_json
+    response_text = response.text
+    response_json = json.loads(response_text)
+    banned_bins = json.load(open("json/banned_bins.json", "r"))
+
+    country_name = (
+        response_json.get("BIN", {})
+        .get("country", {})
+        .get("name", "")
+        .upper()
+    )
+
+    banned = False
+    if str(bin) in banned_bins or "BRAZIL" in country_name:
+        banned = True
+    response_json["banned"] = banned
+    response_json["api_code"] = 200
+    return response_json
 
 db_bins = sqlite3.connect("db/bins.db")
 cursor_bins = db_bins.cursor()
@@ -324,12 +334,12 @@ def get_bin_info_of_database(bin: str) -> dict | None:
         banned = True
     return {
         "bin": result[0],
-        "brand": result[1],
-        "country_name": result[5],
-        "flag": result[8].strip(),
-        "bank_name": result[4],
-        "level": result[3],
-        "type": result[2],
+        "brand": result[1] or "N/A",
+        "country_name": result[5] or "N/A",
+        "flag": result[8].strip() if result[8] else "",
+        "bank_name": result[4] or "N/A",
+        "level": result[3] or "UNAVAILABLE",
+        "type": result[2] or "UNAVAILABLE",
         "banned": banned,
     }
 
@@ -342,7 +352,8 @@ async def get_text_from_pyrogram(m, no_command: bool = False) -> str:
     if hasattr(m.reply_to_message, "text") and m.reply_to_message.text:
         text = m.reply_to_message.text
     if no_command:
-        text = text[len(m.command[0]) + 2 :].strip()
+        parts = text.split(maxsplit=1)
+        text = parts[1].strip() if len(parts) > 1 else ""
     return text
 
 async def FindText(value1, value2, text):
@@ -624,11 +635,17 @@ async def ProxyRandom():
         proxy_lines = archivo.read().splitlines()
         while True:
             proxy_line = random.choice(proxy_lines)
+            if not proxy_line.strip():
+                continue
             parts = proxy_line.split(":")
             if len(parts) >= 4:  
                 host, puerto, username, password = parts[:4]
                 scheme = "socks5" if "socks" in host.lower() or (len(parts) == 5 and "socks" in parts[4].lower()) else "http"
                 proxy_url = f"{scheme}://{username}:{password}@{host}:{puerto}"
+                return {"http://": proxy_url, "https://": proxy_url}
+            elif len(parts) == 2:
+                host, puerto = parts
+                proxy_url = f"http://{host}:{puerto}"
                 return {"http://": proxy_url, "https://": proxy_url}
             
 

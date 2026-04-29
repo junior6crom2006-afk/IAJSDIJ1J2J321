@@ -29,12 +29,12 @@ async def add_manager(client, message):
             "action": "pending"
         }
         
-        with open("database/temp_manager.json", "w") as f:
+        with open("database/temp_manager.json", "w", encoding="utf-8") as f:
             json.dump(temp_data, f)
             
         await message.reply("♯𝗭𝘆𝗿𝗲𝘅 𝗖𝗵𝗸 | Procesando...")
         
-        with open(filepath, 'r') as file:
+        with open(filepath, 'r', encoding="utf-8", errors="replace") as file:
             content = file.read()
         
         # Añadir import si no existe
@@ -78,9 +78,11 @@ async def add_manager(client, message):
             action = "añadido"
         
         # Guardar el archivo
-        with open(filepath, 'w') as file:
+        with open(filepath, 'w', encoding="utf-8") as file:
             file.write(new_content)
-            
+
+        await message.reply(f"♯𝗭𝘆𝗿𝗲𝘅 𝗖𝗵𝗸 | Éxito\n━━━━━━━━━━━━━━━━━━━━\n<a href=\"https://t.me/zyrexnews\">ゕ</a>﹒GateManager {action} en {filename}")
+
     except Exception as e:
         await message.reply(f"♯𝗭𝘆𝗿𝗲𝘅 𝗖𝗵𝗸 | Error\n━━━━━━━━━━━━━━━━━━━━\n<a href=\"https://t.me/zyrexnews\">ゕ</a>﹒Error: {str(e)}")
         if os.path.exists("database/temp_manager.json"):
@@ -90,7 +92,7 @@ async def add_manager(client, message):
 async def check_pending_manager(client, message):
     try:
         if os.path.exists("database/temp_manager.json"):
-            with open("database/temp_manager.json", "r") as f:
+            with open("database/temp_manager.json", "r", encoding="utf-8") as f:
                 data = json.load(f)
             
             if data["action"] == "pending":

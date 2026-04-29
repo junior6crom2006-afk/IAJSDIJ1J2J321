@@ -1,7 +1,10 @@
 import random
+from faker import Faker
 from pyrogram import Client, filters
 from httpx import AsyncClient
 from functions.variables import PREFIXES
+
+fake = Faker()
 
 # Basic list of fake names since the new API doesn't provide them
 NAMES = [
@@ -77,12 +80,29 @@ async def rand_direction(client, message):
         except Exception as e:
             retry_count += 1
             if retry_count == max_retries:
-                error_msg = f"""♯𝗭𝘆𝗿𝗲𝘅 𝗖𝗵𝗸 | Error
+                # Fallback local generator when the API fails
+                name = random.choice(NAMES)
+                street = fake.street_address()
+                city = fake.city()
+                state = fake.state()
+                zipcode = fake.postcode()
+                phone = fake.phone_number()
+                country_code = prefix
+                country_flag = ""
+                username = message.from_user.username if message.from_user.username else message.from_user.id
+                response_text = f"""♯𝗭𝘆𝗿𝗲𝘅 𝗖𝗵𝗸 | Address Generator
 ━━━━━━━━━━━━━━━━━━━━
-<a href="https://t.me/zyrexnews">ゕ</a>﹒Razón: <code>Fallo en la API ({str(e)})</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>Name</b>: <code>{name}</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>Street</b>: <code>{street}</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>City</b>: <code>{city}</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>State</b>: <code>{state}</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>Zip Code</b>: <code>{zipcode}</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>Country</b>: <code>{country_code} {country_flag}</code>
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>Phone</b>: <code>{phone}</code>
+━━━━━━━━━━━━━━━━━━━━
+<a href="https://t.me/zyrexnews">ゕ</a>﹒<b>Req</b>: @{username}
 ━━━━━━━━━━━━━━━━━━━━
 ࿔ Bot Version: 1.0"""
-                await msgedit.edit_text(text=error_msg, disable_web_page_preview=True)
+                await msgedit.edit_text(text=response_text, disable_web_page_preview=True)
                 return
-            
             await msgedit.edit_text(f"<b>⚠️ Reintentando... ({retry_count}/{max_retries})</b>")

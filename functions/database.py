@@ -92,7 +92,7 @@ class Database:
                     self.connection.commit()
                 else:
                     self.promote_to_owner(owner_id)
-                    self.add_premium_membership(owner_id, 9999)
+                    self.add_premium_membership(owner_id, "9999-12-31 23:59:59")
 
     ## ADD
     def add_premium_membership(self, user_id: int, expiration_date: str, plan: str = "Premium") -> Optional[str]:

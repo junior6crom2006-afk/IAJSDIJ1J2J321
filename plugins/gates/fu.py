@@ -9,7 +9,14 @@ import asyncio
 @Client.on_message(filters.command(['fu'], PREFIXES))
 @check_gate(command="/fu", gateway_name="Fullsteam [AUTH]", required_credits=3)
 async def gate_fu(client, message):
-    cc, mes, ano, cvv = message.cc, message.mes, message.ano, message.cvv
+    try:
+        text = await get_text_from_pyrogram(message, no_command=True)
+        parts = re.findall(r'\d+', text)
+        if len(parts) < 4:
+            return await message.reply("❌ Formato: CC|MES|ANO|CVV", reply_to_message_id=message.id)
+        cc, mes, ano, cvv = parts[0], parts[1], parts[2], parts[3]
+    except Exception as e:
+        return await message.reply(f"❌ Error: {str(e)}", reply_to_message_id=message.id)
     
     retries = 0
     max_retries = 3

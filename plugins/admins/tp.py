@@ -80,13 +80,27 @@ async def Admins(CLIENT, message):
         CLIENT_ID = CLIENT_INFO_DB.get("ID")
         CLIENT_USERNAME = CLIENT_INFO_DB.get("USERNAME")
         
-        # Aquí se añade la lógica para sumar días sin reiniciar créditos
+        # Añadir días a la expiración sin reiniciar créditos
+        MAX_EXPIRATION = datetime.datetime(9999, 12, 31, 23, 59, 59)
         current_expiration = CLIENT_INFO_DB.get("EXPIRATION")
+        current_expiration_date = None
+
         if current_expiration:
-            current_expiration_date = datetime.datetime.strptime(current_expiration, "%Y-%m-%d %H:%M:%S")
-            new_expiration_date = current_expiration_date + datetime.timedelta(days=DAY)
+            try:
+                current_expiration_date = datetime.datetime.strptime(current_expiration, "%Y-%m-%d %H:%M:%S")
+            except Exception:
+                current_expiration_date = None
+
+        if current_expiration_date and current_expiration_date < MAX_EXPIRATION:
+            try:
+                new_expiration_date = current_expiration_date + datetime.timedelta(days=DAY)
+            except OverflowError:
+                new_expiration_date = MAX_EXPIRATION
         else:
             new_expiration_date = datetime.datetime.now() + datetime.timedelta(days=DAY)
+
+        if new_expiration_date > MAX_EXPIRATION:
+            new_expiration_date = MAX_EXPIRATION
 
         # Convierte la nueva fecha de expiración a cadena
         new_expiration_date_str = new_expiration_date.strftime("%Y-%m-%d %H:%M:%S")

@@ -41,19 +41,27 @@ async def bin_lookup(client, message):
         data = await get_bin_info(bin_number)
         
         if data:
-            # Handle both possible API response formats
-            bin_data = data.get('BIN', data) 
-            brand = bin_data.get('scheme', 'N/A')
-            ctype = bin_data.get('type', 'N/A')
+            # Handle both possible API response formats and local DB fallback
+            bin_data = data.get('BIN', data)
+            brand = bin_data.get('scheme') or bin_data.get('brand', 'N/A')
+            ctype = bin_data.get('type') or bin_data.get('category', 'N/A')
             level = bin_data.get('level', 'N/A')
-            
+
             # Extract issuer and country safely
-            issuer = bin_data.get('issuer', {})
-            bank = issuer.get('name', 'N/A') if isinstance(issuer, dict) else bin_data.get('bank_name', 'N/A')
-            
-            country_obj = bin_data.get('country', {})
-            country = country_obj.get('name', 'N/A') if isinstance(country_obj, dict) else bin_data.get('country_name', 'N/A')
-            flag = country_obj.get('flag', '') if isinstance(country_obj, dict) else bin_data.get('flag', '')
+            issuer = bin_data.get('issuer')
+            bank = 'N/A'
+            if isinstance(issuer, dict):
+                bank = issuer.get('name') or bin_data.get('bank_name') or bin_data.get('bank') or 'N/A'
+            else:
+                bank = bin_data.get('bank_name') or bin_data.get('bank') or 'N/A'
+
+            country_obj = bin_data.get('country')
+            if isinstance(country_obj, dict):
+                country = country_obj.get('name') or bin_data.get('country_name') or 'N/A'
+                flag = country_obj.get('flag') or bin_data.get('flag', '')
+            else:
+                country = bin_data.get('country_name') or bin_data.get('country', 'N/A')
+                flag = bin_data.get('flag', '')
 
             response = (
                 f"♯𝗭𝘆𝗿𝗲𝘅 𝗖𝗵𝗸 | Bin Lookup\n"

@@ -17,3 +17,5 @@ watchdog==6.0.0
 gunicorn
 flask
 huepy==1.2.1
+cryptography
+pytz
