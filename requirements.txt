@@ -14,3 +14,5 @@ requests==2.32.3
 telegraph==2.2.0
 validators==0.34.0
 watchdog==6.0.0
+gunicorn
+flask
